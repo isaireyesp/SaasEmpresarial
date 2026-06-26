@@ -414,7 +414,7 @@ git push origin feature/nueva-funcion
 
 ---
 
-# 👨‍💻 Fundador
+# 👨‍💻 Desarrollador
 
 <div align="center">
 

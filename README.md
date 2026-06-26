@@ -1,271 +1,503 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/boxyhq/jackson/assets/66887028/871d9c0f-d351-49bb-9458-2542830d7910">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/boxyhq/jackson/assets/66887028/4073c181-0653-4d5b-b74f-e7e84fe79da8">
-  <img alt="BoxyHQ Banner" src="https://github.com/boxyhq/jackson/assets/66887028/b40520b7-dbce-400b-88d3-400d1c215ea1">
-</picture>
+<div align="center">
 
-# ⭐ Enterprise SaaS Starter Kit
+<img width="220" src="https://cdn-icons-png.flaticon.com/512/2885/2885417.png" />
 
-<p>
-    <a href="https://github.com/boxyhq/saas-starter-kit/stargazers"><img src="https://img.shields.io/github/stars/boxyhq/saas-starter-kit" alt="Github stargazers"></a>
-    <a href="https://github.com/boxyhq/saas-starter-kit/issues"><img src="https://img.shields.io/github/issues/boxyhq/saas-starter-kit" alt="Github issues"></a>
-    <a href="https://github.com/boxyhq/saas-starter-kit/blob/main/LICENSE"><img src="https://img.shields.io/github/license/boxyhq/saas-starter-kit" alt="license"></a>
-    <a href="https://twitter.com/BoxyHQ"><img src="https://img.shields.io/twitter/follow/BoxyHQ?style=social" alt="Twitter"></a>
-    <a href="https://www.linkedin.com/company/boxyhq"><img src="https://img.shields.io/badge/LinkedIn-blue" alt="LinkedIn"></a>
-    <a href="https://discord.gg/uyb7pYt4Pa"><img src="https://img.shields.io/discord/877585485235630130" alt="Discord"></a>
+# ☁️ Enterprise SaaS Platform
+
+### Plataforma SaaS empresarial desarrollada con Next.js, TypeScript y PostgreSQL 🚀
+
+<p align="center">
+  <b>Enterprise SaaS Platform</b> es una solución moderna para crear aplicaciones SaaS escalables, seguras y listas para producción, incorporando autenticación, equipos, roles, pagos, auditoría y arquitectura empresarial.
 </p>
 
-The Open Source Next.js SaaS boilerplate for Enterprise SaaS app development.
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-Framework-black?style=for-the-badge&logo=nextdotjs">
+  <img src="https://img.shields.io/badge/TypeScript-Language-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/SaaS-Enterprise-blueviolet?style=for-the-badge">
+</p>
 
-Please star ⭐ the repo if you want us to continue developing and improving the SaaS Starter Kit! 😀
+<p align="center">
+  <a href="#-acerca-de-enterprise-saas-platform">Acerca de</a> •
+  <a href="#-preview">Preview</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a>
+</p>
 
-## 📖 Additional Resources
+</div>
 
-Video - [BoxyHQ's SaaS Starter Kit: Your Ultimate Enterprise-Compliant Boilerplate](https://www.youtube.com/watch?v=oF8QIwQIhyo) <br>
-Blog - [Enterprise-ready Saas Starter Kit](https://boxyhq.com/blog/enterprise-ready-saas-starter-kit)
+---
 
-Next.js-based SaaS starter kit saves you months of development by starting you off with all the features that are the same in every product, so you can focus on what makes your app unique.
+# ☁️ Acerca de Enterprise SaaS Platform
 
-## 🛠️ Built With
+**Enterprise SaaS Platform** es una base sólida para desarrollar aplicaciones SaaS de nivel empresarial utilizando las mejores prácticas del ecosistema moderno.
 
-- [Next.js](https://nextjs.org)
-  This is a React framework that provides features such as server-side rendering and static site generation. It's used for building the user interface of your application. The main configuration for Next.js can be found in `next.config.js`.
-- [Tailwind CSS](https://tailwindcss.com)
-  This is a utility-first CSS framework for rapidly building custom user interfaces. It's used for styling the application. The configuration for Tailwind CSS can be found in `postcss.config.js`.
-- [Postgres](https://www.postgresql.org)
-  This is a powerful, open source object-relational database system. It's used for storing application data. The connection to Postgres is likely managed through Prisma.
-- [React](https://reactjs.org)
-  This is a JavaScript library for building user interfaces. It's used for creating the interactive elements of your application. The React components are located in the components directory.
-- [Prisma](https://www.prisma.io)
-  This is an open-source database toolkit. It's used for object-relational mapping, which simplifies the process of writing database queries. Prisma configuration and schema can be found in the prisma directory.
-- [TypeScript](https://www.typescriptlang.org)
-  This is a typed superset of JavaScript that compiles to plain JavaScript. It's used to make the code more robust and maintainable. TypeScript definitions and configurations can be found in files like `next-env.d.ts` and `i18next.d.ts`.
-- [SAML Jackson](https://github.com/boxyhq/jackson) (Provides SAML SSO, Directory Sync)
-  This is a service for handling SAML SSO (Single Sign-On). It's used to allow users to sign in with a single ID and password to any of several related systems i.e (using a single set of credentials). The implementation of SAML Jackson is primarily located within the files associated with authentication.
-- [Svix](https://www.svix.com/) (Provides Webhook Orchestration)
-  This is a service for handling webhooks. It's used to emit events on user/team CRUD operations, which can then be caught and handled by other parts of the application or external services. The integration of Svix is distributed throughout the codebase, primarily in areas where Create, Read, Update, and Delete (CRUD) operations are executed.
-- [Retraced](https://github.com/retracedhq/retraced) (Provides Audit Logs Service)
-  This is a service for audit logging and data visibility. It helps track user activities within the application i.e (who did what and when in the application). The usage of Retraced would be dispersed throughout the codebase, likely in the files where important actions are performed.
-- [Stripe](https://stripe.com) (Provides Payments)
-  This is a service for handling payments. It's used to process payments for the application. The integration of Stripe is likely found in the files associated with billing and subscriptions.
-- [Playwright](https://playwright.dev) (Provides E2E tests)
-  This is a Node.js library for automating browsers. It's used to run end-to-end tests on the application. The Playwright configuration and tests can be found in the tests directory.
-- [Docker](https://www.docker.com) (Provides Docker Compose)
-  This is a platform for developing, shipping, and running applications. It's used to containerize the application and its dependencies. The Docker configuration can be found in the Dockerfile and docker-compose.yml.
-- [NextAuth.js](https://next-auth.js.org) (Provides Authentication)
-  This is a complete open-source authentication solution for Next.js applications. It's used to handle user authentication and authorization. The NextAuth.js configuration and providers can be found in the `pages/api/auth/[...nextauth].ts` file.
+Incluye autenticación completa, administración de organizaciones, gestión de usuarios, roles, permisos, pagos, auditoría, integración con proveedores externos y una arquitectura preparada para escalar.
 
-## 🚀 Deployment
+La plataforma está pensada para acelerar el desarrollo de productos SaaS sin comenzar desde cero.
 
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fboxyhq%2Fsaas-starter-kit&env=NEXTAUTH_SECRET,SMTP_HOST,SMTP_PORT,SMTP_USER,SMTP_PASSWORD,SMTP_FROM,DATABASE_URL,APP_URL">
-<img width="90" alt="Deploy with Vercel" src="https://vercel.com/button" />
-</a>
+Permite:
 
-<a href="https://heroku.com/deploy" alt="Deploy to Heroku">
-<img alt="Deploy to Heroku" src="https://www.herokucdn.com/deploy/button.svg" />
-</a>
+- 👥 Gestión de organizaciones
+- 🔐 Autenticación segura
+- 👤 Administración de usuarios
+- 🛡️ Roles y permisos
+- 💳 Suscripciones y pagos
+- 📈 Dashboard administrativo
+- 📜 Auditoría de acciones
+- 🌐 Multiempresa (Multi Tenant)
 
-<a href="https://cloud.digitalocean.com/apps/new?repo=https://github.com/boxyhq/saas-starter-kit/tree/main" alt="Deploy to DO">
-<img width="200" alt="Deploy to DO" src="https://www.deploytodo.com/do-btn-blue-ghost.svg" />
-</a>
+El proyecto fue desarrollado para practicar:
 
-## ✨ Getting Started
-
-Please follow these simple steps to get a local copy up and running.
-
-### Prerequisites
-
-- Node.js (Version: >=18.x)
+- Next.js
+- TypeScript
+- Arquitectura SaaS
+- Prisma ORM
 - PostgreSQL
-- NPM
-- Docker compose
+- Seguridad empresarial
+- Desarrollo Full Stack
 
-### Development
+---
 
-#### 1. Setup
+# 📸 Preview
 
-- [Fork](https://github.com/boxyhq/saas-starter-kit/fork) the repository
-- Clone the repository by using this command:
+## 🏠 Dashboard Principal
+
+<div align="center">
+
+<img src="screenshots/dashboard.png" width="900"/>
+
+</div>
+
+---
+
+## 👥 Gestión de Equipos
+
+<div align="center">
+
+<img src="screenshots/team.png" width="900"/>
+
+</div>
+
+---
+
+## 🔐 Inicio de Sesión
+
+<div align="center">
+
+<img src="screenshots/login.png" width="900"/>
+
+</div>
+
+---
+
+## ⚙️ Configuración
+
+<div align="center">
+
+<img src="screenshots/settings.png" width="900"/>
+
+</div>
+
+---
+
+## 📊 Panel Administrativo
+
+<div align="center">
+
+<img src="screenshots/admin.png" width="900"/>
+
+</div>
+
+---
+
+# ✨ Características
+
+## 🔐 Autenticación
+
+- Registro de usuarios
+- Inicio de sesión
+- Magic Link
+- OAuth (Google y GitHub)
+- SAML SSO
+- Recuperación de contraseña
+- Gestión de sesiones
+
+---
+
+## 👥 Gestión de Organizaciones
+
+- Crear organizaciones
+- Equipos de trabajo
+- Invitaciones
+- Gestión de miembros
+- Cambiar roles
+- Eliminar organizaciones
+
+---
+
+## 🛡️ Seguridad
+
+- Roles y permisos
+- JWT
+- NextAuth
+- Protección de rutas
+- Headers de seguridad
+- Auditoría completa
+
+---
+
+## 💳 Facturación
+
+- Integración con Stripe
+- Suscripciones
+- Pagos
+- Gestión de planes
+- Facturación empresarial
+
+---
+
+## 📈 Dashboard
+
+- Estadísticas generales
+- Usuarios registrados
+- Equipos activos
+- Actividad reciente
+- Auditoría
+- Reportes
+
+---
+
+# ⚙️ Funcionalidades Empresariales
+
+## 🌐 Multi Tenant
+
+- Empresas independientes
+- Aislamiento de datos
+- Configuración por organización
+- Gestión centralizada
+
+---
+
+## 📜 Auditoría
+
+- Registro de acciones
+- Historial de usuarios
+- Eventos del sistema
+- Logs completos
+
+---
+
+## 🔗 Integraciones
+
+- Webhooks
+- SCIM
+- Directory Sync
+- SAML SSO
+- API REST
+- Eventos personalizados
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+## ⚛️ Frontend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=nextjs,react,typescript,tailwind" />
+
+</p>
+
+- Next.js
+- React
+- TypeScript
+- TailwindCSS
+
+---
+
+## ⚙️ Backend
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=nodejs,prisma" />
+
+</p>
+
+- Node.js
+- Next.js API Routes
+- Prisma ORM
+- NextAuth
+
+---
+
+## 🗄️ Base de Datos
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=postgresql" />
+
+</p>
+
+- PostgreSQL
+- Prisma
+- SQL
+
+---
+
+## ☁️ DevOps
+
+<p>
+
+<img src="https://skillicons.dev/icons?i=docker,vercel" />
+
+</p>
+
+- Docker
+- Docker Compose
+- Vercel
+- Playwright
+
+---
+
+# 📂 Estructura del Proyecto
 
 ```bash
-git clone https://github.com/<your_github_username>/saas-starter-kit.git
+Enterprise-SaaS/
+│
+├── app/
+├── components/
+├── pages/
+├── prisma/
+├── lib/
+├── hooks/
+├── middleware/
+├── public/
+├── styles/
+├── tests/
+├── docker-compose.yml
+├── package.json
+└── README.md
 ```
 
-#### 2. Go to the project folder
+---
+
+# ⚡ Instalación
+
+## 1️⃣ Clonar repositorio
 
 ```bash
-cd saas-starter-kit
+git clone https://github.com/isairey/enterprise-saas-platform
 ```
 
-#### 3. Install dependencies
+---
+
+## 2️⃣ Entrar al proyecto
+
+```bash
+cd enterprise-saas-platform
+```
+
+---
+
+## 3️⃣ Instalar dependencias
 
 ```bash
 npm install
 ```
 
-#### 4. Set up your .env file
+---
 
-Duplicate `.env.example` to `.env`.
+## 4️⃣ Configurar variables de entorno
+
+Crear el archivo:
 
 ```bash
-cp .env.example .env
+.env
 ```
 
-#### 5. Create a database (Optional)
+Agregar:
 
-To make the process of installing dependencies easier, we offer a `docker-compose.yml` with a Postgres container.
+```env
+DATABASE_URL=
+
+NEXTAUTH_SECRET=
+
+NEXTAUTH_URL=http://localhost:3000
+```
+
+---
+
+## 5️⃣ Crear base de datos
 
 ```bash
 docker-compose up -d
 ```
 
-#### 6. Set up database schema
+---
+
+## 6️⃣ Ejecutar migraciones
 
 ```bash
 npx prisma db push
 ```
 
-#### 7. Start the server
+---
 
-In a development environment:
+## 7️⃣ Ejecutar aplicación
 
 ```bash
 npm run dev
 ```
 
-#### 8. Start the Prisma Studio
+---
 
-Prisma Studio is a visual editor for the data in your database.
-
-```bash
-npx prisma studio
-```
-
-#### 9. Testing
-
-We are using [Playwright](https://playwright.dev/) to execute E2E tests. Add all tests inside the `/tests` folder.
-
-Update `playwright.config.ts` to change the playwright configuration.
-
-##### Install Playwright dependencies
+## 8️⃣ Abrir navegador
 
 ```bash
-npm run playwright:update
+http://localhost:3000
 ```
 
-##### Run E2E tests
+---
+
+# 🔥 Funcionalidades Técnicas
+
+## 🔐 Seguridad
+
+- NextAuth
+- OAuth
+- JWT
+- SAML
+- Roles
+- Permisos
+- Protección de API
+
+---
+
+## 🗄️ Base de Datos
+
+- Prisma ORM
+- PostgreSQL
+- Migraciones
+- Relaciones
+- Modelado escalable
+
+---
+
+## 🚀 Arquitectura
+
+- Server Components
+- API Routes
+- Middleware
+- Hooks
+- Componentes reutilizables
+
+---
+
+## 🧪 Testing
+
+- Playwright
+- Testing E2E
+- Automatización
+- Validación de flujos
+
+---
+
+# 🧠 Objetivos del Proyecto
+
+## 🎯 Aprender y practicar
+
+- Next.js App Router
+- Arquitectura SaaS
+- Prisma ORM
+- PostgreSQL
+- Multi Tenant
+- Seguridad empresarial
+- Integraciones modernas
+- Desarrollo Full Stack
+
+---
+
+# 📊 Roadmap
+
+## 🚧 Próximamente
+
+- 🤖 IA para automatización
+- 📱 Aplicación móvil
+- 📈 Analytics avanzados
+- 🌎 Internacionalización completa
+- 📧 Campañas de correo
+- ☁️ Integración con AWS
+- 🔥 Microservicios
+- 💬 Chat en tiempo real
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Haz Fork del proyecto
+
+2. Crear una rama
 
 ```bash
-npm run test:e2e
+git checkout -b feature/nueva-funcion
 ```
 
-_Note: HTML test report is generated inside the `report` folder. Currently supported browsers for test execution `chromium` and `firefox`_
+3. Realizar cambios
 
-## ⚙️ Feature configuration
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
 
-To get started you only need to configure the database by following the steps above. For more advanced features, you can configure the following:
+4. Subir cambios
 
-### Authentication with NextAuth.js
+```bash
+git push origin feature/nueva-funcion
+```
 
-The default login options are email and GitHub. Configure below:
+5. Abrir un Pull Request 🚀
 
-1. Generate a secret key for NextAuth.js by running `openssl rand -base64 32` and adding it to the `.env` file as `NEXTAUTH_SECRET`.
-2. For email login, configure the `SMTP_*` environment variables in the `.env` file to send magic link login emails. You can use services like [AWS SES](https://aws.amazon.com/ses/), [Sendgrid](https://sendgrid.com/) or [Resend](https://resend.com/).
-3. For social login with GitHub and Google, you need to create OAuth apps in the respective developer consoles and add the client ID and secret to the `.env` file. The default is email login and For GitHub, follow the instructions [here](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app). For Google, follow the instructions [here](https://support.google.com/cloud/answer/6158849?hl=en).
+---
 
-### Svix Webhooks
+# 👨‍💻 Fundador
 
-1. Create an account on [Svix](https://www.svix.com/)
-2. The authenticaton token and add `SVIX_API_KEY` to the `.env` file.
+<div align="center">
 
-### Stripe Payments
+<img width="140" src="https://github.com/isairey.png" />
 
-1. Create an account on [Stripe](https://stripe.com/)
-2. Add the [Stripe API secret key](https://dashboard.stripe.com/apikeys) to the `.env` file as `STRIPE_SECRET_KEY`.
-3. Create a webhook in the [Stripe dashboard](https://dashboard.stripe.com/webhooks). The URL is your app hostname plus `/api/webhooks/stripe`. If you want to set this up locally you will need to use the [Stripe CLI forwarder](https://docs.stripe.com/webhooks#test-webhook).
-4. Once created, add the signing secret to the `.env` file as `STRIPE_WEBHOOK_SECRET`.
+## Isai Reyes — Full Stack & SaaS Developer
 
-### Recaptcha
+Desarrollador apasionado por la creación de plataformas empresariales, aplicaciones escalables, inteligencia artificial y soluciones SaaS modernas.
 
-1. Create an account on [Google reCAPTCHA](https://www.google.com/recaptcha/admin/enterprise). This will create a Google Cloud account if you don't have one.
-2. From the Key Details in the [Google Cloud Console](https://console.cloud.google.com/security/recaptcha), add the reCAPTCHA ID to the `.env` file as `RECAPTCHA_SITE_KEY`.
-3. Click Key Details > Integration then click Use legacy key to get the secret key and add it to the `.env` file as `RECAPTCHA_SECRET_KEY`.
+</div>
 
-### Sentry
+---
 
-1. Create an account on [Sentry](https://sentry.io/), skip the onboarding and create a new Next.js project.
-2. At the bottom of the page, get the DSN and add it to the `.env` file as `SENTRY_DSN`. The other variables are optional.
+# 🌟 Apoya el Proyecto
 
-#### Fully customizable boilerplate out of the box, see images below 👇👇👇
+Si te gusta **Enterprise SaaS Platform**:
 
-![saas-starter-kit-poster](/public/saas-starter-kit-poster.png)
+⭐ Dale una estrella al repositorio
 
-## 🥇 Features
+🍴 Haz Fork del proyecto
 
-- Create account
-- Sign in with Email and Password
-- Sign in with Magic Link
-- Sign in with SAML SSO
-- Sign in with Google [[Setting up Google OAuth](https://support.google.com/cloud/answer/6158849?hl=en)]
-- Sign in with GitHub [[Creating a Github OAuth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)]
-- Directory Sync (SCIM)
-- Update account
-- Create team
-- Delete team
-- Invite users to the team
-- Manage team members
-- Update team settings
-- Webhooks & Events
-- Internationalization
-- Audit logs
-- Roles and Permissions
-- Dark mode
-- Email notifications
-- E2E tests
-- Docker compose
-- Prisma Studio
-- Update member role
-- Directory Sync Events
-- Avatar Upload
-- SAML SSO
-- Audit Log
-- Webhook
-- Payments
-- Security Headers
+📢 Compártelo con otros desarrolladores
 
-## ➡️ Coming Soon
+---
 
-- Billing & subscriptions
-- Unit and integration tests
+# 📜 Licencia
 
-## ✨ Contributing
+Proyecto Open Source desarrollado con fines educativos y para la construcción de aplicaciones SaaS empresariales utilizando tecnologías modernas.
 
-Thanks for taking the time to contribute! Contributions make the open-source community a fantastic place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+---
 
-Please try to create bug reports that are:
+<div align="center">
 
-- _Reproducible._ Include steps to reproduce the problem.
-- _Specific._ Include as much detail as possible: which version, what environment, etc.
-- _Unique._ Do not duplicate existing opened issues.
-- _Scoped to a Single Bug._ One bug per report.
+### ☁️ Enterprise SaaS Platform — Construye aplicaciones SaaS escalables, seguras y listas para producción.
 
-[Contributing Guide](https://github.com/boxyhq/saas-starter-kit/blob/main/CONTRIBUTING.md)
-
-## 🤩 Community
-
-- [Discord](https://discord.gg/uyb7pYt4Pa) (For live discussion with the Open-Source Community and BoxyHQ team)
-- [Twitter](https://twitter.com/BoxyHQ) / [LinkedIn](https://www.linkedin.com/company/boxyhq) (Follow us)
-- [Youtube](https://www.youtube.com/@boxyhq) (Watch community events and tutorials)
-- [GitHub Issues](https://github.com/boxyhq/saas-starter-kit/issues) (Contributions, report issues, and product ideas)
-
-## 🌍 Contributors
-
-<a href="https://github.com/boxyhq/saas-starter-kit/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=boxyhq/saas-starter-kit" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-
-## 🛡️ License
-
-[Apache 2.0 License](https://github.com/boxyhq/saas-starter-kit/blob/main/LICENSE)
+</div>

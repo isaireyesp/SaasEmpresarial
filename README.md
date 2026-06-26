@@ -214,7 +214,7 @@ El proyecto fue desarrollado para practicar:
 # 📂 Estructura del Proyecto
 
 ```bash
-Enterprise-SaaS/
+SaasEmpresarial/
 │
 ├── app/
 ├── components/
@@ -238,7 +238,7 @@ Enterprise-SaaS/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/isairey/enterprise-saas-platform
+git clone https://github.com/isairey/SaasEmpresarial
 ```
 
 ---
@@ -246,7 +246,7 @@ git clone https://github.com/isairey/enterprise-saas-platform
 ## 2️⃣ Entrar al proyecto
 
 ```bash
-cd enterprise-saas-platform
+cd SaasEmpresarial
 ```
 
 ---
